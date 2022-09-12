@@ -1,9 +1,26 @@
 * {
     background-color: rgb(236, 188, 99);
     justify-content:center;
+    text-align: center;
 }
 
-.button {
+#btn {
     justify-content: center;
-    color:blue;
+    border:solid purple;
 }
+
+#title {
+    text-align: center;
+}
+
+#navbar {
+    display:flex;
+    justify-content:space-evenly;
+    padding:4px;
+    margin: 4px;
+}
+
+#postBox {
+    border:solid black;
+}
+

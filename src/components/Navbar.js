@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ logout, token }) => {
   return (
     <header>
-      <nav>
+      <nav id="navbar">
         <Link to='/'>Home</Link>
         <Link to='/posts'>Posts</Link>
         <Link to='/profile'>Profile</Link>

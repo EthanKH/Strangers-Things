@@ -15,8 +15,8 @@ const filteredPosts = posts.filter(post => postMatches(post, searchTerm));
 const postsToDisplay = searchTerm.length ? filteredPosts : posts;                
 
 return (         
-  <div className='outerDiv'id='outer div element'>
-    <div className='searchedBar'>
+  <div className='outerDiv'>
+    <div>
       <form onSubmit={(event) => {
         event.preventDefault();             
           }}>
@@ -28,31 +28,32 @@ return (
                 <button type ='Search'>Search</button>
       </form>
     </div>   
-
-    {
-      postsToDisplay.map((post) => {
-        const {description, location, price, title, _id, isAuthor } = post;
-        return (
-          <div key={_id}>
-            <h3>{title}</h3>
-            <p>Description: {description}</p>
-            <p>Price: {price}</p>
-            <p>Location: {location}</p>
-            {
-              isAuthor ? (
-                <button>
-                  <Link to={`/posts/edit-post/${_id}`}>Edit</Link>
-                </button>
-              ) : (
-                <button>
-                  <Link to={`/posts/${_id}`}>View</Link>
-                </button>
-              )
-            }
-          </div>
-        )
-      })
-    }
+    <div id='postBox'>  
+      {
+        postsToDisplay.map((post) => {
+          const {description, location, price, title, _id, isAuthor } = post;
+          return (
+            <div key={_id}>
+              <h3>{title}</h3>
+              <p>Description: {description}</p>
+              <p>Price: {price}</p>
+              <p>Location: {location}</p>
+              {
+                isAuthor ? (
+                  <button id="btn">
+                    <Link to={`/posts/edit-post/${_id}`}>Edit</Link>
+                  </button>
+                ) : (
+                  <button id="btn">
+                    <Link to={`/posts/${_id}`}>View</Link>
+                  </button>
+                )
+              }
+            </div>
+          )
+        })
+      }
+    </div>
   </div>
   )
 }

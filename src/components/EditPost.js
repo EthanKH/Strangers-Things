@@ -37,7 +37,7 @@ const EditPost = ({ posts, token, fetchPosts, navigate }) => {
       editPost();
       
     }}>
-      <input 
+      <input
         type='text'
         placeholder={title}
         onChange={(ev) => setNewTitle(ev.target.value)}

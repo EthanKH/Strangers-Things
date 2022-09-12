@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to Stranger's Things!</h1>
+      <h1 id="title">Welcome to Stranger's Things!</h1>
       <button>
         <Link to='/posts/create-post'>Add a Post</Link>
       </button>
