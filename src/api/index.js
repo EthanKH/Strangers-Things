@@ -136,7 +136,7 @@ export const updatePost = async ({token, title, description, price, location, wi
 
 export const createMessage = async ({postID, token, message}) => {
   try {
-    const respons = await fetch(`${baseURL}/posts/${postID}/messages`, {
+    const response = await fetch(`${baseURL}/posts/${postID}/messages`, {
      method: 'POST',
      headers: {
       'Content-Type': 'application/json',
