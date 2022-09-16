@@ -21,16 +21,19 @@ const Login = ({ setToken, navigate }) => {
       event.preventDefault();
       handleSubmit();
     }}>
+      <h4>Welcome back!</h4>
       <input 
         type='text'
         placeholder='Enter Username'
         onChange={(event) => setUsername(event.target.value)}
       />
+      <p></p>
       <input 
         type='password'
         placeholder='Enter Password'
         onChange={(event) => setPassword(event.target.value)}
       />
+      <p></p>
       <button type='submit'>Submit</button>
     </form>
   )

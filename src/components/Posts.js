@@ -28,13 +28,13 @@ return (
                 <button type ='Search'>Search</button>
       </form>
     </div>   
-    <div id='postBox'>  
+    <div>  
       {
         postsToDisplay.map((post) => {
           const {description, location, price, title, _id, isAuthor } = post;
           return (
-            <div key={_id}>
-              <h3>{title}</h3>
+            <div key={_id} id='postBox'>
+              <h3><p>{title}</p></h3>
               <p>Description: {description}</p>
               <p>Price: {price}</p>
               <p>Location: {location}</p>

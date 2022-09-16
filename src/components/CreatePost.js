@@ -3,10 +3,10 @@ import { createPost } from '../api';
 
 const CreatePost = ({ token, fetchPosts, navigate }) => {
   const newPost = {
-    title: 'Jasons new new post',
-    description: 'testing 9/10',
-    price: 'free',
-    location: 'NY',
+    title: 'New Post Title',
+    description: 'Description',
+    price: 'Price',
+    location: 'Location',
     willDeliver: false
   }
   

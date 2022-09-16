@@ -9,7 +9,7 @@ const Profile = ({ user }) => {
   return (
     <div>
       <div>
-        <h1>Messages from other users!</h1>
+        <h1>Messages from others!</h1>
         {
           messages && messages.map(message => {
             const fromUserID = message.fromUser._id;
@@ -18,7 +18,7 @@ const Profile = ({ user }) => {
             
             if (userID !== fromUserID) {
               return (
-                <div key={message._id}>
+                <div key={message._id} id='postBox'>
                   <p>From User: {username} </p>
                   <p>Message: {message.content}</p>
                   <p>Post Reference: {title}</p>
@@ -33,10 +33,14 @@ const Profile = ({ user }) => {
         {
           messages && messages.map(message => {
             const fromUserID = message.fromUser._id;
+            const {title} = message.post;
             
             if (userID === fromUserID) {
               return (
-                <div key={message._id}>{message.content}</div>
+                <div id='postBox' key={message._id}>
+                  <p>Your Message: {message.content}</p>
+                  <p>Post Reference: {title}</p>
+                </div>
               )
             }
           })    
