@@ -38,7 +38,7 @@ const SinglePostView = ({ posts, token }) => {
   return (
     <div>
       <div id='postBox'>
-        <h3>{title}</h3>
+        <h3><p>{title}</p></h3>
         <p>Description: {description}</p>
         <p>Price: {price}</p>
         <p>Location: {location}</p>
